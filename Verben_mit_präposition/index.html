@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Список Немецких Глаголов с Управлением</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Глаголы с Управлением (Список)</h1>
+<div class="filter-panel">
+<div class="filter-group"><label for="searchWord">Поиск по слову</label><input type="text" id="searchWord" placeholder="Глагол, перевод, падеж..."></div>
+<div class="filter-group"><label for="filterLevel">Уровень</label><select id="filterLevel"><option value="all">Все уровни</option><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="C1">C1</option></select></div>
+<div class="filter-group"><label for="filterReflexive">Тип глагола</label><select id="filterReflexive"><option value="all">Все типы</option><option value="reflexive">Возвратные (sich)</option><option value="normal">Невозвратные</option></select></div>
+<div class="filter-group"><label for="filterSemantic">Семантика</label><select id="filterSemantic"><option value="all">Все группы</option></select></div>
+<div class="filter-group"><label for="filterPrep">Управление / Предлог</label><select id="filterPrep"><option value="all">Любое управление</option></select></div>
+</div>
+<div class="list-container">
+<table id="verbsTable">
+<thead><tr><th style="width:15%">Глагол</th><th style="width:20%">Конструкция</th><th style="width:25%">Перевод</th><th style="width:30%">Пример</th><th style="width:10%">Инфо</th></tr></thead>
+<tbody id="listBody"></tbody>
+</table>
+<div id="noResultsBlock" class="no-results" style="display:none">Глаголы по выбранным фильтрам не найдены.</div>
+</div>
+</div>
+<script type="module" src="./index.js"></script>
+</body>
+</html>
