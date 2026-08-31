@@ -1,0 +1,24 @@
+:root { --bg-color: #f4f6f9; --card-bg: #ffffff; --text-color: #2c3e50; --accent-color: #3498db; --border-radius: 8px; }
+body { font-family: Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
+.container { max-width: 1200px; margin: 0 auto; }
+h1 { text-align: center; margin-bottom: 30px; }
+.filter-panel { background-color: var(--card-bg); padding: 20px; border-radius: var(--border-radius); box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 15px; margin-bottom: 30px; }
+.filter-group { display: flex; flex-direction: column; }
+.filter-group label { font-size: 12px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; color: #7f8c8d; }
+.filter-group input, .filter-group select { padding: 10px; border: 1px solid #bdc3c7; border-radius: 4px; font-size: 14px; outline: none; transition: border-color .2s; }
+.filter-group input:focus, .filter-group select:focus { border-color: var(--accent-color); }
+.list-container { background-color: var(--card-bg); border-radius: var(--border-radius); box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 15px; }
+th, td { padding: 14px 20px; border-bottom: 1px solid #edf2f7; }
+th { background-color: #f8f9fa; font-weight: bold; text-transform: uppercase; font-size: 12px; color: #7f8c8d; letter-spacing: .5px; }
+tr:hover { background-color: #fdfdfe; }
+.verb-col { font-weight: bold; font-size: 16px; color: #2c3e50; white-space: nowrap; }
+.formula-col { font-family: monospace; font-size: 14px; color: #e74c3c; font-weight: bold; white-space: nowrap; }
+.example-block { font-size: 13.5px; line-height: 1.4; }
+.example-de { font-weight: bold; color: #34495e; }
+.example-ru { color: #7f8c8d; }
+.badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: bold; text-transform: uppercase; display: inline-block; }
+.badge-level { background-color: #e67e22; color: white; }
+.badge-refl { background-color: #9b59b6; color: white; margin-left: 5px; }
+.semantic-text { font-size: 12px; color: #95a5a6; }
+.no-results { text-align: center; padding: 40px; color: #7f8c8d; font-size: 18px; }
