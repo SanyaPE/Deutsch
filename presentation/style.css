@@ -1,0 +1,281 @@
+@page {
+    size: A4;
+    margin: 10mm 12mm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.2;
+    color: #2c3e50;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* --- Header (cards) --- */
+.header {
+    background-color: #2b4c6f;
+    color: #ffffff;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    page-break-inside: avoid;
+    display: table;
+    width: 100%;
+}
+
+.header-title {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-back {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.header-back a {
+    color: #a2c2e8;
+    font-size: 9pt;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.header-back a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* --- Typography --- */
+h2 {
+    font-size: 12pt;
+    color: #2b4c6f;
+    border-left: 4px solid #4a90e2;
+    padding-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+}
+
+/* --- Index page lists (also safe for cards) --- */
+ul {
+    padding-left: 20px;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 6px;
+    font-size: 10.5pt;
+}
+
+a {
+    color: #2b4c6f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #4a90e2;
+}
+
+.block-section {
+    margin-bottom: 24px;
+    page-break-inside: avoid;
+}
+
+/* --- Vocabular block (cards) --- */
+.vocab-container {
+    display: table;
+    width: 100%;
+    margin-bottom: 8px;
+    page-break-inside: avoid;
+}
+
+.vocab-column {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+}
+
+.vocab-column:first-child {
+    padding-right: 10px;
+}
+
+.vocab-column:last-child {
+    padding-left: 10px;
+}
+
+.vocab-column h3 {
+    font-size: 10.5pt;
+    color: #2b4c6f;
+    margin: 0 0 3px 0;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #dbe3eb;
+}
+
+.word-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.word-list li {
+    padding: 2px 0;
+    border-bottom: 1px solid #eef2f5;
+    font-size: 9.5pt;
+}
+
+.german-word {
+    font-weight: 600;
+    color: #1a365d;
+}
+
+.russian-word {
+    color: #5a6c7d;
+    font-size: 9pt;
+    display: block;
+    margin-top: 1px;
+}
+
+/* --- Text block (cards) --- */
+.text-block {
+    background-color: #fcfcfc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 8px;
+    text-align: justify;
+    page-break-inside: avoid;
+}
+
+/* --- Thesis table (cards) --- */
+.thesis-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    page-break-inside: avoid;
+    font-size: 9.5pt;
+}
+
+.thesis-table th, .thesis-table td {
+    border: 1px solid #cbd5e1;
+    padding: 3px 6px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.thesis-table th {
+    background-color: #2b4c6f;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.category-row {
+    background-color: #f1f5f9;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.translation-cell {
+    color: #64748b;
+    font-size: 9pt;
+}
+
+/* --- Connector (some cards) --- */
+.connector {
+    color: #c0392b;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* --- Notes section (cards) --- */
+.notizen-section {
+    margin-top: 10px;
+    page-break-inside: avoid;
+}
+
+.notizen-line {
+    border-bottom: 1px solid #cbd5e1;
+    height: 5mm;
+        margin-bottom: 0px;
+}
+
+/* ===========================================
+   Mobile adaptation — screens <= 768px wide
+   =========================================== */
+@media screen and (max-width: 768px) {
+    body {
+        width: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Header: stack title and back-link vertically, centered */
+    .header {
+        display: block;
+        text-align: center;
+        padding: 8px 10px;
+    }
+
+    .header-title,
+    .header-back {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-title {
+        margin-bottom: 4px;
+        font-size: 12pt;
+    }
+
+    .header-back a {
+        font-size: 9pt;
+    }
+
+    /* Vocabular columns: stack on top of each other */
+    .vocab-container {
+        display: block;
+    }
+
+    .vocab-column {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .vocab-column:first-child,
+    .vocab-column:last-child {
+        padding: 0;
+    }
+
+    /* Thesis table: smaller font for narrow screens */
+    .thesis-table {
+        font-size: 9pt;
+    }
+
+    .thesis-table th,
+    .thesis-table td {
+        padding: 3px 4px;
+        font-size: 8pt;
+    }
+
+    /* Text block: tighter padding on small screens */
+    .text-block {
+        padding: 8px;
+    }
+}
